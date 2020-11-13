@@ -6,22 +6,19 @@ import Home from './pages/Home';
 import './App.css';
 
 // React components
+export function getWebS(){
+  return new WebSocket('ws://localhost:1234/ws');
+}
 function App() {
+  function refreshPage(){
+    window.location.reload();
+  }
   return (
-    <div className="App">
-      <h1>Final Project App</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/admin">Admin</Link>
-          </li>
-          <li>
-            <Link to="/feed">Feed</Link>
-          </li>
-        </ul>
+    <div className="App">      
+      <nav>       
+            <div onClick={refreshPage} class="alink"><Link to="/"><h3>Home</h3></Link></div>        
+            <div onClick={refreshPage} class="alink"><Link to="/admin"><h3>Admin</h3></Link></div>         
+            <div onClick={refreshPage} class="alink"><Link to="/feed"><h3>Feed</h3></Link></div>        
       </nav>
       <Switch>
         <Route path="/admin">

@@ -1,11 +1,45 @@
 import React from 'react';
-
+import'./Admin.css';
+import {getWebS} from '../App';
+const websocket = getWebS();
 function Admin() {
+
+  const[postId, setPostId] = React.useState('');
+  const[objType, setObjType] = React.useState('');
+  const[objPrice, setObjPrice] = React.useState('');
+  const[objTitle, setObjTitle] = React.useState('');
+
+  function posting(){
+    var message = ["post", objType, objPrice, objTitle];
+    window.location.reload();
+    websocket.send(message);
+  }
+  function editing(){
+    var message = ["edit",postId,objType, objPrice,objTitle];
+    window.location.reload();
+    websocket.send(message);
+  }
+  function deleting(){
+    var message = ["delete",postId,objType, objPrice,objTitle];
+    window.location.reload();
+    websocket.send(message);
+  }
   return (
-    <div>
-      <h2>Admin Page</h2>
-    </div>
+    <div class ="box">		  
+		  <div class="posting">
+        	<h3>postId<input value={postId} onChange={e=>setPostId(e.target.value)}/></h3>
+		      <h3>Type<input value={objType} onChange={e=>setObjType(e.target.value)}/></h3>
+          <h3>Price<input value={objPrice} onChange={e=>setObjPrice(e.target.value)}/></h3>
+          <h3>Title<input value={objTitle} onChange={e=>setObjTitle(e.target.value)}/></h3>         
+      </div>
+		  <div class="sub-button">
+	            <button onClick={posting}  type="submit">Post</button>
+	            <button onClick={editing}  type="submit">Edit</button>
+	            <button onClick={deleting} type="submit">Delete</button>
+	    </div>
+	</div>
   );
 }
 
 export default Admin;
+
