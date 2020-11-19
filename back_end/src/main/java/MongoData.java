@@ -8,6 +8,9 @@ import com.mongodb.client.model.Updates;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MongoData {
     MongoClient mongoClient = new MongoClient("localhost", 27017);
     MongoDatabase db = mongoClient.getDatabase("MyDatabase");
@@ -36,5 +39,26 @@ public class MongoData {
         collection.deleteOne(new Document("_id", new ObjectId(toDelete)));
     }
 
+    public List<String> data2FE() {
+        System.out.println("in the data get in md");
+        List<String> dataInfo = new ArrayList<>();
+        FindIterable <Document> iterable = collection.find();
+        MongoCursor<Document> cursor = iterable.iterator();
+        try {
+            while(cursor.hasNext()){
+                String cleaned = cursor.next().toString();
+                String evenCleaner = cleaned.substring(9, cleaned.length() - 1).replaceAll("=", "\":\"")
+                        .replaceAll(",", "\",\"").replaceAll(" ", "");
+                StringBuilder sb = new StringBuilder(evenCleaner);
+                sb.insert(evenCleaner.length() - 1, "\"");
+                sb.insert(1, "\"");
+                System.out.println(sb.toString());
+                dataInfo.add(sb.toString());
+            }
+        } finally {
+            cursor.close();
+        }
+        return dataInfo;
+    }
 
 }

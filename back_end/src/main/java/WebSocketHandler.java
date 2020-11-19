@@ -14,11 +14,22 @@ public class WebSocketHandler {
     private static List<String> messages = new Vector<>();
     private static Map<Session, Session> sessionMap = new ConcurrentHashMap<>();
 
+    public static void broadcast(String message){
+        sessionMap.keySet().forEach(session -> {
+            try {
+                session.getRemote().sendString(message);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
 
     @OnWebSocketConnect
     public void connected(Session session) throws IOException {
         MongoData mongoData = new MongoData();
         sessionMap.put(session, session);
+        System.out.println("Inside the connect " + mongoData.data2FE().toString());
+        session.getRemote().sendString(mongoData.data2FE().toString());
     }
 
     @OnWebSocketClose
@@ -35,6 +46,7 @@ public class WebSocketHandler {
         } else if (message.startsWith("edit")){
             mongoData.deleteObj(message);
         }
+        broadcast(mongoData.data2FE().toString());
     }
 
     @OnWebSocketError
