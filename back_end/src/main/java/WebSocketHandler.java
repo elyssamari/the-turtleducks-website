@@ -11,16 +11,30 @@ import java.util.concurrent.ConcurrentHashMap;
 @WebSocket
 public class WebSocketHandler {
 
+    private static List<String> messages = new Vector<>();
+    private static Map<Session, Session> sessionMap = new ConcurrentHashMap<>();
+
+
     @OnWebSocketConnect
     public void connected(Session session) throws IOException {
+        MongoData mongoData = new MongoData();
+        sessionMap.put(session, session);
     }
 
     @OnWebSocketClose
     public void closed(Session session, int statusCode, String reason){
+        sessionMap.remove(session);
     }
 
     @OnWebSocketMessage
     public void message(Session session, String message){
+        MongoData mongoData = new MongoData();
+        System.out.println("From front end " + message);
+        if(message.startsWith("post")) {
+            mongoData.addObj(message);
+        } else if (message.startsWith("edit")){
+            mongoData.deleteObj(message);
+        }
     }
 
     @OnWebSocketError

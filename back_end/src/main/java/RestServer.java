@@ -9,6 +9,10 @@ public class RestServer {
         webSocket("/ws", WebSocketHandler.class);
 
         // Your Handlers go here
-        get("/", (req, res) -> "Hello World");
+        get("/", (req, res) -> {
+            String message = req.queryMap().get().value();
+            System.out.println("Helloooooo");
+            return "Hi.";
+        });
     }
 }
