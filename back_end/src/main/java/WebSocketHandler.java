@@ -44,6 +44,8 @@ public class WebSocketHandler {
         if(message.startsWith("post")) {
             mongoData.addObj(message);
         } else if (message.startsWith("edit")){
+            mongoData.editObj(message);
+        }else if(message.startsWith("delete")){
             mongoData.deleteObj(message);
         }
         broadcast(mongoData.data2FE().toString());

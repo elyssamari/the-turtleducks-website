@@ -2,6 +2,7 @@ import React from 'react';
 import'./Admin.css';
 import {getWebS} from '../App';
 const websocket = getWebS();
+
 function Admin() {
 
   const[postId, setPostId] = React.useState('');
@@ -10,17 +11,17 @@ function Admin() {
   const[objTitle, setObjTitle] = React.useState('');
 
   function posting(){
-    var message = ["post", objType, objPrice, objTitle];
+    let message = ["post", objType, objPrice, objTitle];
     window.location.reload();
     websocket.send(message);
   }
   function editing(){
-    var message = ["edit",postId,objType, objPrice,objTitle];
+    let message = ["edit",postId,objType, objPrice,objTitle];
     window.location.reload();
     websocket.send(message);
   }
   function deleting(){
-    var message = ["delete",postId,objType, objPrice,objTitle];
+    let message = ["delete",postId,objType, objPrice,objTitle];
     window.location.reload();
     websocket.send(message);
   }
@@ -40,6 +41,4 @@ function Admin() {
 	</div>
   );
 }
-
 export default Admin;
-

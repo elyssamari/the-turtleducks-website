@@ -14,11 +14,12 @@ function App() {
     window.location.reload();
   }
   return (
-    <div className="App">      
-      <nav>       
+    <div className="App">
+      
+      <nav>
             <div onClick={refreshPage} class="alink"><Link to="/"><h3>Home</h3></Link></div>        
             <div onClick={refreshPage} class="alink"><Link to="/admin"><h3>Admin</h3></Link></div>         
-            <div onClick={refreshPage} class="alink"><Link to="/feed"><h3>Feed</h3></Link></div>        
+            <div onClick={refreshPage} class="alink"><Link to="/feed"><h3>Feed</h3></Link></div>       
       </nav>
       <Switch>
         <Route path="/admin">
