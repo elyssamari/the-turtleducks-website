@@ -48,19 +48,53 @@ function Feed() {
       document.getElementById("container").appendChild(objlist);
     });
   }
+
+   function filterDfilter(){
+     document.getElementById("typef").innerHTML=" ";
+    console.log("Inside the filterDfilter function");
+    let newLt = [];
+    for(let i = 0; i<messages.length; i++){
+      newLt.push(messages[i].Type);
+    }
+    let newtwo = [];
+    let finding = false;
+    for(let a = 0; a<newLt.length; a++){
+      for(let b = a+1; b<newLt.length-1; b++){
+        if(!finding){
+          if(newLt[a]===newLt[b]){
+            finding = true;
+          }
+        }
+      }if(!finding){
+        console.log("inside the adding");
+        newtwo.push(newLt[a]);
+      }else{
+        finding = false;
+      }
+    }
+    console.log(newLt);
+    console.log(newtwo);
+    for(let j = 0; j<newtwo.length; j++){
+      let tempO = document.createElement("option");
+      tempO.text = newtwo[j];
+      tempO.value = newtwo[j];
+      document.getElementById("typef").appendChild(tempO);
+      console.log("appended");
+    }
+}
   
   return (
-    <div class ="box">
+    <div class ="box" >
       <div class ="filter">
-        <label for="fil"> Type<select id ="typef">
-            {messages.map(item=><option value = {item.Type}>{item.Type}</option>)}
+        <label for="fil"onMouseOver={filterDfilter}> Type<select id ="typef" >
+            
           </select></label>
           <button onClick={createFilteredListing}>Filter</button>
       </div>
       <div id="container" >
         
           {
-          messages.map(item=><div class = "Listing"><h3>postId: {item._id}</h3><br /><h3>Type: {item.Type}</h3><br />
+          messages.map(item=><div class = "Listing" ><h3>postId: {item._id}</h3><br /><h3>Type: {item.Type}</h3><br />
           <h3>Price: {item.Price}</h3><br /><h3>Title: {item.Title}</h3></div>)
         }
           
