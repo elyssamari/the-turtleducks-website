@@ -47,7 +47,11 @@ function Feed() {
       let objTitle = document.createElement("h3");
       objTitle.innerHTML = item.Title;
       objlist.appendChild(objTitle);
-     
+      
+      let objImg = document.createElement("img");//new
+      objImg.innerHTML.img = document.getElementById("imgID");//messing around 
+      objlist.appendChild(objImg);
+
       document.getElementById("container").appendChild(objlist);
     });
   }
@@ -64,7 +68,7 @@ function Feed() {
     let finding = false;
     //going through newLt since there may be duplicates of a type. Puts the types in newtwo.
     for(let a = 0; a<newLt.length; a++){
-      for(let b = a+1; b<newLt.length-1; b++){
+      for(let b = a+1; b<newLt.length; b++){
         if(!finding){
           if(newLt[a]===newLt[b]){
             finding = true;
@@ -104,7 +108,7 @@ function Feed() {
          
           {
           messages.map(item=><div class = "Listing" ><h3>postId: {item._id}</h3><br /><h3>Type: {item.Type}</h3><br />
-          <h3>Price: {item.Price}</h3><br /><h3>Title: {item.Title}</h3></div>)
+          <h3>Price: {item.Price}</h3><br /><h3>Title: {item.Title}</h3><br/><h3>Image: {item.img}</h3></div>)
         }
           
         </div>
