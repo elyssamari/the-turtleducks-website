@@ -4,7 +4,7 @@ import {getWebS} from '../App';
 const websocket = getWebS();
 
 function Admin() {
-
+//most of the stuff from here from lectures. i just added more stuff to handle the more buttons and functions
   const[postId, setPostId] = React.useState('');
   const[objType, setObjType] = React.useState('');
   const[objPrice, setObjPrice] = React.useState('');

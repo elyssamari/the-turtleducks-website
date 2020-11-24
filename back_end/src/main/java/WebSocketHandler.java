@@ -39,6 +39,8 @@ public class WebSocketHandler {
 
     @OnWebSocketMessage
     public void message(Session session, String message){
+        //had a new class since it would be neater, from the frontend i added a word in front of the message so
+        //we know if it will post, edit, oe delete, after that function is executed, it will broadcast it.
         MongoData mongoData = new MongoData();
         System.out.println("From front end " + message);
         if(message.startsWith("post")) {
