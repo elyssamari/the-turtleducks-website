@@ -9,12 +9,12 @@ function Home() {
 
       <div class="grid">
 
-        <div class="home-div">
+        <div class="home-div" id ="home-box">
           Home: <br />
           Click Home to come back to this page!
       </div>
 
-        <div class="home-div">
+        <div class="home-div" id ="admin-box">
           Admin: <br />
           Enter your listings~
           <li>type</li>
@@ -22,7 +22,7 @@ function Home() {
           <li>title</li>
         </div>
 
-        <div class="home-div">
+        <div class="home-div" id ="feed-box">
           Feed:<br />
           Here, you will see all the available listings!
       </div>
