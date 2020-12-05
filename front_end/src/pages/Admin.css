@@ -1,23 +1,25 @@
 body{
     background-color : #000000;
-    color:#ff944d;
+    color:#869ec3;
 }
 
 button{
     margin: 19px 20px;
-    border:2px solid #000000;
+    border:2px solid #869ec3;
     border-radius:1em;
     font-size:20px;
-    color:#000000;
+    color:#e1f2fe;
     padding: 5px 10px;
-    background-color:#ff944d;
+    background-color: #869ec3;
+    font-family: 'Courier New';
+    font-weight: bold;
 }
 
 .posting {
     border-radius: 1em;
-    color: #ff944d;
+    color: #869ec3;
     margin: 100px 250px 0px 250px;
-    border: 5px solid #ff944d;
+    border: 5px solid #869ec3;
     padding: 20px 20px;
     display:grid;
     
@@ -29,6 +31,8 @@ button{
     margin : 5px 5px 15px 5px;
     font-size : 125%;
     display: inline-block;
+    font-family: 'Courier New';
+    font-weight: bold;
 
 }
 input{
