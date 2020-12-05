@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1f4b8eff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,12 +28,13 @@
   color: #61dafb;
 }
 nav{
-  background: #ff944d;
+  /*header*/
+  background: #1f4b8eff;
   position: fixed;
   left: 0;
   right:0;   
   top: 0;
-  color: #000000;
+  color: #e1f2feff;
   display: inline-block;
   height: 60px;
   align-self: center;
@@ -41,12 +42,14 @@ nav{
   margin: 0 0 10px 0
  }
  nav h3{
+  font-family: 'Courier New', monospace;
    text-decoration: none;
+   font-size: xx-large;
    margin: 10px 0 0 0;
  }
  .alink{
    text-decoration: none;
-   color: #000000;
+   color: #e1f2feff;
    display: inline-block;
    padding: 0 80px;
    font-size: 15px;
@@ -56,7 +59,9 @@ nav{
  }
  
  .alink:hover{
-   background-color: #00e673;
+   /*header hover*/
+   background-color: #869ec3ff
+   ;
    height: 60px;
  }
  
