@@ -1,10 +1,11 @@
 body{
     background-color: #e1f2feff;
     color: #869ec3;
+    font-family: 'Courier New';
 }
 
 .filter{
-    color: #ff944d;
+    color: #869ec3;
     margin: 100px 10px 5px 0;
 
     text-align: left;
@@ -23,7 +24,7 @@ select{
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: "photo""title";
-    border: 3px solid #ff944d;
+    border: 3px solid #1f4b8eff;
 }
 
 #container{
