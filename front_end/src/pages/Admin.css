@@ -22,31 +22,37 @@ button{
     border: 5px solid #869ec3;
     padding: 20px 20px;
     display:grid;
-    
     text-align: center;
     font-weight: bold;
 }
+
 .posting h3{
     border-radius : .5em;
-    margin : 5px 5px 15px 5px;
-    font-size : 125%;
+    margin : 30px 5px 15px 5px;
+    font-size : 150%;
     display: inline-block;
     font-family: 'Courier New';
     font-weight: bold;
+}
 
-}
 input{
-	margin: 5px;
-	width: 600px
+    margin: 5px;
+    height: 20px;
+    width: 600px;
+    
 }
+
 button:hover{
     background-color : #ffffff;
     color:#003d66;
-    
 }
 
 .sub-button{
    display:block;
    text-align: center;
-   
+}
+
+.shadow{
+    box-shadow: 0 6px 6px -6px #869ec3;
+    border-color:  #869ec3;
 }

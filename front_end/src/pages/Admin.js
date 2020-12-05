@@ -38,10 +38,10 @@ function Admin() {
   return (
     <div class="box">
       <div class="posting">
-        <h3>postId<input value={postId} onChange={e => setPostId(e.target.value)} /></h3>
-        <h3>Type<input value={objType} onChange={e => setObjType(e.target.value)} /></h3>
-        <h3>Price<input value={objPrice} onChange={e => setObjPrice(e.target.value)} /></h3>
-        <h3>Title<input value={objTitle} onChange={e => setObjTitle(e.target.value)} /></h3>
+        <h3>postId<input value={postId} onChange={e => setPostId(e.target.value)} class="shadow" /></h3>
+        <h3>Type<input value={objType} onChange={e => setObjType(e.target.value)} class="shadow" /></h3>
+        <h3>Price<input value={objPrice} onChange={e => setObjPrice(e.target.value)} class="shadow" /></h3>
+        <h3>Title<input value={objTitle} onChange={e => setObjTitle(e.target.value)} class="shadow" /></h3>
         <h3>Upload Image<input type="file" input value={objImg} onChange={e => setObjImg(e.target.value)}></input></h3>
       </div>
       <div class="sub-button">
