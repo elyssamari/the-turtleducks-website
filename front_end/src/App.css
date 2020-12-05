@@ -42,10 +42,11 @@ nav{
   margin: 0 0 10px 0
  }
  nav h3{
-  font-family: 'Courier New', monospace;
-   text-decoration: none;
+  font-family: 'Courier New';
+   text-decoration: underline;
    font-size: xx-large;
    margin: 10px 0 0 0;
+   color: #ffffffff;
  }
  .alink{
    text-decoration: none;
