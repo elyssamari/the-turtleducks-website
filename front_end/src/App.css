@@ -21,48 +21,47 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #ffffff;
 }
 
 .App-link {
   color: #61dafb;
 }
+
 nav{
   /*header*/
   background: #1f4b8eff;
-  position: fixed;
+  position:fixed;
   left: 0;
   right:0;   
   top: 0;
-  color: #e1f2feff;
-  display: inline-block;
   height: 60px;
-  align-self: center;
-  text-align: center;
-  margin: 0 0 10px 0
  }
+
  nav h3{
   font-family: 'Courier New';
    text-decoration: underline;
    font-size: xx-large;
-   margin: 10px 0 0 0;
+   margin: 10px 0 0 0; /*aligns the hover with text*/
    color: #ffffffff;
  }
+
+ img{
+  margin-left: -200px;
+  margin-top: -29px;
+  margin-bottom: -68px;
+  padding-right: -20px;
+ }
+
  .alink{
-   text-decoration: none;
-   color: #e1f2feff;
    display: inline-block;
-   padding: 0 80px;
-   font-size: 15px;
+   padding: 0px 80px;
    text-align: center;
-   font-size: 20px;
-   margin: 0 10px 5px 10px;
  }
  
  .alink:hover{
    /*header hover*/
-   background-color: #869ec3ff
-   ;
+   background-color: #869ec3ff;
    height: 60px;
  }
  

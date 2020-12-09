@@ -12,16 +12,26 @@ h4{
     padding-top: 230px;
 }
 
+[id^="TurtleDuck"]{
+    border-radius: 20px;
+    margin-top: -15px;
+    margin-bottom: -200px;
+    margin-left: 10px;
+} 
+
 [id^="home-box"]{
-    box-shadow: -10px 10px 0 0px #eadbd4ff;
+    box-shadow: -10px 10px 0 0px #eadbd4ff;;
+    margin-bottom: 75px;
 }
 
 [id^="admin-box"]{
     box-shadow: 0px 10px #eadbd4ff;;
+    margin-bottom: 75px;
 }
 
 [id^="feed-box"]{
     box-shadow: 10px 10px #eadbd4ff;;
+    margin-bottom: 75px;
 }
 
 .home-div{
@@ -34,6 +44,4 @@ h4{
     font-size: 21px;
     color:#1f4b8e;
     text-align: center;
-    
 }
-/* box-shadow: 5px 10px #eadbd4ff;*/
