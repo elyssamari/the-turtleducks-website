@@ -25,7 +25,7 @@ function Feed() {
       objId.innerHTML = "postId: " + item._id;
       objlist.appendChild(objId)
       let objType = document.createElement("h3");
-      objType.innerHTML = "Tpye: " + item.Type;
+      objType.innerHTML = "Type: " + item.Type;
       objlist.appendChild(objType)
       let objP = document.createElement("h3");
       objP.innerHTML = "Price: " + item.Price;

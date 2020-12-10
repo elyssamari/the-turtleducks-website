@@ -7,7 +7,6 @@ body{
 .filter{
     color: #869ec3;
     margin: 100px 10px 5px 0;
-
     text-align: left;
     font-weight: bold;
     display: inline-block;
@@ -38,6 +37,6 @@ select{
 }
 
 h3{
-    padding: 2px 5px;
+    padding: 15px 5px;
     margin: 0;
 }

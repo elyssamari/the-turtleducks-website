@@ -28,7 +28,7 @@ button{
 
 .posting h3{
     border-radius : .5em;
-    margin : 30px 5px 15px 5px;
+    margin : 25px 5px 15px 5px;
     font-size : 150%;
     display: inline-block;
     font-family: 'Courier New';
@@ -39,7 +39,6 @@ input{
     margin: 5px;
     height: 20px;
     width: 600px;
-    
 }
 
 button:hover{
