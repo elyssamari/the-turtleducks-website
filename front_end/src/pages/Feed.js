@@ -34,9 +34,9 @@ function Feed() {
       objTitle.innerHTML = "Title: " + item.Title;
       objlist.appendChild(objTitle);
 
-    //  let objImg = document.createElement("img");//new
-    //  objImg.innerHTML.img = document.getElementById("imgID");//messing around 
-    //  objlist.appendChild(objImg);
+      //  let objImg = document.createElement("img");//new
+      //  objImg.innerHTML.img = document.getElementById("imgID");//messing around 
+      //  objlist.appendChild(objImg);
 
       document.getElementById("container").appendChild(objlist);
     });
@@ -126,9 +126,6 @@ function Feed() {
       console.log("appended");
     }
   }
-  //don't think i can comment down there so it's here. for label for the Type next to the box i choose onMouseOver to activate the 
-  //filterDfilter function, i tried window.onload on the function and <select> and onClick on <select> but it was giving me issues
-  //the rest can be found on lecture i think classwork 9?
   return (
     <div class="box" >
       <div class="filter">
