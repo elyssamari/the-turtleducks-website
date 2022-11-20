@@ -15,5 +15,6 @@
 * React Front end
 * Websocket real time updates
 
-##Website Presentation:
+## Website Presentation:
+Explains our code and showcases snippets of our code
 https://docs.google.com/presentation/d/1Uel68_nNhIXd8SE4PaQRBPcd75rno9J1c0CzQZZmbYc/edit?usp=sharing 
