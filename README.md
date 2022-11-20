@@ -14,3 +14,6 @@
 * Mongodb database
 * React Front end
 * Websocket real time updates
+
+##Website Presentation:
+https://docs.google.com/presentation/d/1Uel68_nNhIXd8SE4PaQRBPcd75rno9J1c0CzQZZmbYc/edit?usp=sharing 
